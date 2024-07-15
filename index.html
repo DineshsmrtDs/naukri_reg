@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Naukri Registration Form</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 40px; /* Adjust height as needed */
+    }
+
+    .signin-link {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      max-width: 1000px; /* Adjust as needed */
+      width: 100%;
+      margin: 0 auto; /* Center the container */
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .left-column {
+      width: 25%;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .right-column {
+      width: 50%;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .google-column {
+      width: 25%;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"] {
+      width: calc(100% - 22px); /* Adjust for input padding and border */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .google-btn {
+      background-color: #fff;
+      color: #4285f4;
+      border: 1px solid #4285f4;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      max-width: 200px; /* Adjust as needed */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .google-btn:hover {
+      background-color: #f2f2f2;
+    }
+
+    .google-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .steps {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .steps h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .steps ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .steps li {
+      margin-bottom: 10px;
+    }
+
+    small {
+      display: block;
+      margin-top: 5px;
+      color: #666;
+    }
+
+    hr {
+      width: 100%;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="naukri_logo.png" alt="Logo">
+      <h1>Naukri </h1>
+    </div>
+     <small style="text-align: center; display: block;">Already Registered? <a href="#">Login</a> here</small>
+  </div>
+
+  <div class="container">
+    <div class="left-column">
+      <div class="steps">
+        <h2>Create your Naukri profile</h2>
+        <h3>On registering, you can</h3>
+        <ul>
+          <li>✔ Build your profile and let recruiters find you</li>
+          <li>✔ Get job postings delivered right to your email</li>
+          <li>✔ Find a job and grow your career</li>
+        </ul>
+      </div>
+    </div>
+    <div class="right-column">
+      <h2>Registration Form</h2>
+      <div class="form-group">
+        <label for="full_name">Full name*</label>
+        <input type="text" id="full_name" name="full_name" placeholder="What is your name?" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email ID*</label>
+        <input type="email" id="email" name="email" placeholder="Tell us your Email ID" required>
+        <small>We'll send relevant jobs and updates to this email</small>
+      </div>
+      <div class="form-group">
+        <label for="password">Password*</label>
+        <input type="password" id="password" name="password" placeholder="Minimum 6 characters" required>
+        <small>This helps your account stay protected</small>
+      </div>
+      <div class="form-group">
+        <label for="mobile_number">Mobile number*</label>
+        <div style="display: flex; align-items: center;">
+          <span style="margin-right: 10px;">+91</span>
+          <input type="number" id="mobile_number" name="mobile_number" placeholder="Enter your mobile number" required>
+        </div>
+        <small>Recruiters will contact you on this number</small>
+      </div>
+      <div class="form-group">
+        <label for="work_status">Work status*</label>
+        <div class="radio-group">
+          <div>
+            <input type="radio" id="experienced" name="work_status" value="experienced" checked>
+            <label for="experienced">I'm experienced</label>
+            <img src="https://img.icons8.com/ios/50/000000/briefcase.png" alt="Briefcase icon" style="width: 20px; height: 20px;">
+          </div>
+          <div>
+            <input type="radio" id="fresher" name="work_status" value="fresher">
+            <label for="fresher">I'm a fresher</label>
+            <img src="https://img.icons8.com/ios/50/000000/open-book.png" alt="Open book icon" style="width: 20px; height: 20px;">
+          </div>
+        </div>
+        <small>I have work experience (excluding internships)</small>
+        <small>I am a student/ Haven't worked after graduation</small>
+      </div>
+      <div class="check-box">
+        <input type="checkbox" id="updates" name="updates">
+        <label for="updates">Send me important updates & promotions via SMS, email, and WhatsApp</label>
+      </div>
+      <button type="submit">Register now</button>
+      <small>By clicking Register, you agree to the <a href="#">Terms and Conditions</a> & <a href="#">Privacy Policy</a> of Naukri.com</small>
+      <hr>
+    </div>
+    <div class="google-column">
+      <p>Continue with</p>
+      <button class="google-btn">
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google logo">
+        Google
+      </button>
+   
+    </div>
+  </div>
+</body>
+</html>
+
